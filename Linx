@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=dev
+    <title>Linx – Social Media App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Linx</h1>
+        <nav>
+            <button id="homeBtn">Home</button>
+            <button id="exploreBtn">Explore</button>
+            <button id="profileBtn">Profile</button>
+        </nav>
+    </header>
+
+    <!-- Main Feed -->
+    <main id="feed">
+        <div class="post">
+            <p><strong>User123:</strong> Welcome to Linx!</p>
+            <button class="likeBtn">❤️ Like</button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Linx App</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-family: 'Cursive', sans-serif;
+}
+
+header nav button {
+    background-color: #ff4081;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    margin-left: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Feed */
+main#feed {
+    padding: 20px;
+}
+
+.post {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.likeBtn {
+    background-color: #ff4081;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #1a1a1a;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+// Like button functionality
+const likeButtons = document.querySelectorAll(".likeBtn");
+likeButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        btn.textContent = "❤️ Liked";
+        btn.style.backgroundColor = "#333";
+    });
+});
+
+// Navigation buttons (just example alerts for now)
+document.getElementById("homeBtn").addEventListener("click", () => alert("Home clicked!"));
+document.getElementById("exploreBtn").addEventListener("click", () => alert("Explore clicked!"));
+document.getElementById("profileBtn").addEventListener("click", () => alert("Profile clicked!"));
